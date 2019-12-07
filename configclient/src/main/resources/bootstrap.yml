@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    config:
+      name: configclient
+      label: master
+      discovery:
+        enabled: true
+        serviceId: configserver
+eureka:
+  client:
+    seriveUrl:
+      defaultZone: http://localhost:8761/eureka/
+managent:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
